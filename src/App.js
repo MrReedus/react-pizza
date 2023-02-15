@@ -10,9 +10,9 @@ import PizzaBlock from "./components/PizzaBlock";
 function App() {
   const [items, setItems] = React.useState([]);
   React.useEffect(() => {
-    fetch("https://63ece635be929df00cb4a1e8.mockapi.io/items")
-      .then((response) => response.json())
-      .then((items) => setItems(items));
+    fetch("https://63ece635be929df00cb4a1e8.mockapi.io/items") //! Получаем данные с сервера
+      .then((response) => response.json()) //! преобразуем данные в JSON
+      .then((items) => setItems(items)); //! рендерим данные
   }, []); //! сделай запрос на сервер когда комоненты не отрендерены, когда отрендерены не делай, пустой = не отрендерен, не = пустой отрендерен.
 
   return (
