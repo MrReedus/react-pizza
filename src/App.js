@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Categories from "./components/Categories";
 import Sort from "./components/Sort";
 import PizzaBlock from "./components/PizzaBlock";
-
+import Skeleton from "./components/PizzaBlock/Skeleton";
 function App() {
   const [items, setItems] = React.useState([]);
   React.useEffect(() => {
@@ -27,7 +27,7 @@ function App() {
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
             {items.map((obj) => {
-              return <PizzaBlock key={obj.id} {...obj} />;
+              return <Skeleton key={obj.id} {...obj} />;
             })}
           </div>
         </div>
